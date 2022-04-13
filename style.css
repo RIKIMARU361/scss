@@ -1,0 +1,40 @@
+.testscss .testscss__txt {
+  font-size: 30px;
+  color: #1824ae;
+  font-weight: bold;
+}
+
+.testscss--2 .testscss__txt {
+  font-size: 40px;
+  color: #d80387;
+}
+
+.testscss--3 .testscss__txt {
+  color: black;
+  font-size: 20px;
+}
+
+.testscss--3 .testscss__txt--v {
+  color: #5ecc1f;
+  font-size: 10px;
+}
+
+.testscss--4 .testscss__txt, .testscss--4 .testscss__txt--v {
+  border: 1px solid rgba(241, 117, 1, 0.133);
+  padding-bottom: 30px;
+  color: #000;
+}
+
+.testscss--4 .testscss__txt--v {
+  border-color: green;
+}
+
+.testscss--5__txt {
+  color: black;
+  font-size: 60px;
+}
+
+.testscss--5__txt:hover {
+  font-size: 100px;
+}
+/*# sourceMappingURL=style.css.map */

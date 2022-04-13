@@ -1,0 +1,60 @@
+//SCSSの勉強
+// ①変数化、カラーを変数に置き換えるごとで修正時に一括で変化できる
+$testscss_color: rgb(24, 36, 174);
+$testscss_color--2: rgb(216, 3, 135);
+
+.testscss {
+  .testscss__txt{
+    font-size: 30px;
+    color: $testscss_color;
+    font-weight: bold;
+  }
+}
+
+// ②ネスト化構造化することにより　記述量を減らせる
+.testscss--2 {
+  .testscss__txt {
+    font-size: 40px;
+    color: $testscss_color--2;
+  }
+}
+
+// ③mixinsを使用することでコードの塊を作成
+@mixin hoge($color: rgb(94, 204, 31), $fSize: 10px) {
+  color: $color;
+  font-size: $fSize;
+}
+.testscss--3 {
+  .testscss__txt {
+    @include hoge(black,20px);
+  }
+  .testscss__txt--v {
+    @include hoge();
+  }
+}
+
+// ③継承必要な部分だけがcssに書き出しされる
+%test-shared {
+  border: 1px solid rgba(241, 117, 1, 0.133);
+  padding-bottom: 30px;
+  color: #000;
+}
+.testscss--4 {
+  .testscss__txt{
+    @extend %test-shared;
+  }
+  .testscss__txt--v {
+    @extend %test-shared;
+    border-color: green;
+  }
+}
+// ④親要素の変数化
+.testscss--5 {
+  &__txt {
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+  }
+  &__txt:hover {
+    font-size: 100px;
+  }
+}
